@@ -13,13 +13,13 @@
 
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        <input class="form-control" type="text" name="name" placeholder="name">
+                        <input class="form-control" type="text" name="name" placeholder="name" required>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <input class="form-control" type="text" name="slug" placeholder="slug">
+                        <input class="form-control" type="text" name="slug" placeholder="slug" required>
                     </div>
                     <div class="col-md-12 mb-3">
-                        <textarea class="form-control" name="description" cols="5" rows="5" placeholder="description"></textarea>
+                        <textarea class="form-control" name="description" cols="5" rows="5" placeholder="description" required></textarea>
                     </div>
                     <div class="col-md-6">
                         <input type="checkbox" name="status">
@@ -28,16 +28,16 @@
                         <input type="checkbox" name="popular">
                     </div>
                     <div class="col-md-12 mb-3">
-                        <input class="form-control" type="text" name="meta_title" placeholder="meta_title">
+                        <input class="form-control" type="text" name="meta_title" placeholder="meta_title" required>
                     </div>
                     <div class="col-md-12 mb-3">
-                        <textarea class="form-control" name="meta_descrip" cols="5" rows="5" placeholder="meta_descrip"></textarea>
+                        <textarea class="form-control" name="meta_descrip" cols="5" rows="5" placeholder="meta_descrip" required></textarea>
                     </div>
                     <div class="col-md-12 mb-3">
-                        <textarea class="form-control" name="meta_keywords" cols="5" rows="5" placeholder="meta_keywords"></textarea>
+                        <textarea class="form-control" name="meta_keywords" cols="5" rows="5" placeholder="meta_keywords" required></textarea>
                     </div>
                     <div class="col-md-12">
-                        <input type="file" name="image">
+                        <input type="file" name="image" required>
                     </div>
                     <div class="col-md-12">
                         <button type="submit" class="btn btn-primary">Submit</button>
