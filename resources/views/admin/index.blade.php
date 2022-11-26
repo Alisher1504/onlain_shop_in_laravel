@@ -2,6 +2,10 @@
 
 @section('content')
 
-
+    <div class="card">
+        <div class="card-body">
+            <h1>Alisher Ruzmetov</h1>
+        </div>
+    </div>
 
 @endsection

@@ -14,13 +14,27 @@
     </div>
     <div class="sidebar-wrapper">
       <ul class="nav">
-        <li class="nav-item active  ">
-          <a class="nav-link" href="#0">
+        <li class="nav-item active">
+          <a class="nav-link" href="{{ url('dashboard') }}">
             <i class="material-icons">dashboard</i>
             <p>Dashboard</p>
           </a>
         </li>
-        <!-- your sidebar here -->
+        
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url('category') }}">
+            <i class="material-icons">dashboard</i>
+            <p>Category</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url('add') }}">
+            <i class="material-icons">dashboard</i>
+            <p>add Category</p>
+          </a>
+        </li>
+
       </ul>
     </div>
   </div>
