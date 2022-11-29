@@ -14,21 +14,21 @@
     </div>
     <div class="sidebar-wrapper">
       <ul class="nav">
-        <li class="nav-item active">
+        <li class="nav-item {{ Request::is('dashboard') ? 'active' : '' }}">
           <a class="nav-link" href="{{ url('dashboard') }}">
             <i class="material-icons">dashboard</i>
             <p>Dashboard</p>
           </a>
         </li>
-        
-        <li class="nav-item">
+
+        <li class="nav-item {{ Request::is('category') ? 'active' : '' }}">
           <a class="nav-link" href="{{ url('category') }}">
             <i class="material-icons">dashboard</i>
             <p>Category</p>
           </a>
         </li>
 
-        <li class="nav-item">
+        <li class="nav-item {{ Request::is('add') ? 'active' : '' }}">
           <a class="nav-link" href="{{ url('add') }}">
             <i class="material-icons">dashboard</i>
             <p>add Category</p>
