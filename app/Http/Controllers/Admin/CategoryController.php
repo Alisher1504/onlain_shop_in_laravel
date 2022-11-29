@@ -41,7 +41,7 @@ class CategoryController extends Controller
         $category->save();
 
         return redirect('category')->with('status', 'category add successfully');
-            
+
     }
 
     public function edit($id) {
@@ -78,6 +78,20 @@ class CategoryController extends Controller
 
         return redirect('category')->with('status', 'update category successfully');
 
-    } 
+    }
+
+    public function destroy($id) {
+        $data = Category::find($id);
+        if($data->image){
+
+            $path = 'assets/uploads/category/' . $data->image;
+            if(File::exists($path)){
+                File::delete($path);
+            }
+
+        }
+        $data->delete();
+        return redirect('category')->with('status', 'destroy category successfully');
+    }
 
 }

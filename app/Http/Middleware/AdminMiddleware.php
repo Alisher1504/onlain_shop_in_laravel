@@ -23,11 +23,11 @@ class AdminMiddleware
                 return $next($request);
             }
             else{
-                return redirect('/home')->with('mssg', 'are not admin');
+                return redirect('/home')->with('status', 'are not admin');
             }
         }
         else {
-            return redirect('/home')->with('mssg', 'Logged in please');
+            return redirect('/home')->with('status', 'Logged in please');
         }
         
     }

@@ -31,7 +31,7 @@ class LoginController extends Controller
 
     public function authuseradnadmin() {
         if(Auth::user()->role_as == '1'){
-            return redirect('dashboard');
+            return redirect('/dashboard');
         }
         else if(Auth::user()->role_as == '0'){
             return redirect('/');
