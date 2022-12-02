@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\FrontendController;
@@ -37,12 +39,15 @@ Route::group(['middleware' => ['auth', 'is_admin']], function() {
 
     Route::get('destroy/{id}', [CategoryController::class, 'destroy']);
 
-    /*-----------------------------------------------------------------------------*/
 
     Route::get('/product', [ProductController::class, 'index']);
 
     Route::get('/add_product', [ProductController::class, 'add_product']);
     Route::post('/addproduct', [ProductController::class, 'addproduct'])->name('addproduct');
 
+    Route::get('editproduct/{id}', [ProductController::class, 'edit_product']);
+
+    Route::get('destroy-product/{id}', [ProductController::class, 'destroy_product']);
+    Route::put('update-product/{id}', [ProductController::class, 'update_product']);
 
 });

@@ -12,9 +12,9 @@
                 <thead>
                     <tr>
                         <th>Id</th>
+                        <th>Category Name</th>
                         <th>Name</th>
-                        <th>Slug</th>
-                        <th>Description</th>
+                        <th>Selling Price</th>
                         <th>Image</th>
                         <th>Actions</th>
                     </tr>
@@ -24,15 +24,15 @@
                     @foreach ($products as $key)
                         <tr>
                             <td>{{ $key->id }}</td>
+                            <td>{{ $key->category->name }}</td>
                             <td>{{ $key->name }}</td>
-                            <td>{{ $key->slug }}</td>
-                            <td>{{ $key->description }}</td>
+                            <td>{{ $key->selling_price }}</td>
                             <td>
                                 <img width="150" src="{{ asset('assets/uploads/product/' . $key->image) }}" alt="">
                             </td>
                             <td>
-                                <a href="{{ url('edit-category/' . $key->id) }}" class="btn btn-primary">Edit</a>
-                                <a href="{{ url('destroy/' . $key->id) }}" class="btn btn-danger">Destroy</a>
+                                <a href="{{ url('editproduct/'.$key->id) }}" class="btn btn-primary">Edit</a>
+                                <a href="{{ url('destroy-product/' . $key ->id) }}" class="btn btn-danger">Destroy</a>
                             </td>
 
                         </tr>

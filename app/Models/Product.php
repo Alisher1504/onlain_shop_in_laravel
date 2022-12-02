@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Product extends Model
 {
@@ -28,5 +29,9 @@ class Product extends Model
         'meta_keyvord',
         'meta_description',
     ];
+
+    public function category() {
+        return $this->belongsTo(Category::class, 'cate_id', 'id');
+    }
 
 }
