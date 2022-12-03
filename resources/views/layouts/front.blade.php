@@ -15,6 +15,7 @@
 
     {{-- <link rel="stylesheet"  href="{{ asset('admin/css/material-dashboard.css') }}"> --}}
     <!-- Scripts -->
+
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
@@ -22,7 +23,7 @@
     <div class="container">
 
         @include('layouts.inc.frontnavbar')
-        @include('layouts.inc.frontslider')
+
         <div class="container-fluid">
             @yield('content')
         </div>
@@ -34,6 +35,8 @@
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+
+    @yield('script')
     @if(session('status'))
 
         <script>

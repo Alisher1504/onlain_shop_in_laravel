@@ -49,7 +49,7 @@ class ProductController extends Controller
         $product->qty = $request->input('qty');
         $product->tax = $request->input('tax');
         $product->status = $request->input('status') == TRUE ? '1' : '0';
-        $product->trending = $request->input('trening')  == TRUE ? '1' : '0';
+        $product->trending = $request->input('trending')  == TRUE ? '1' : '0';
         $product->meta_title = $request->input('meta_title');
         $product->meta_keyvord = $request->input('meta_keyvord');
         $product->meta_description = $request->input('meta_description');
@@ -102,7 +102,7 @@ class ProductController extends Controller
         $product->qty = $request->input('qty');
         $product->tax = $request->input('tax');
         $product->status = $request->input('status') == TRUE ? '1' : '0';
-        $product->trending = $request->input('trening')  == TRUE ? '1' : '0';
+        $product->trending = $request->input('trending')  == TRUE ? '1' : '0';
         $product->meta_title = $request->input('meta_title');
         $product->meta_keyvord = $request->input('meta_keyvord');
         $product->meta_description = $request->input('meta_description');

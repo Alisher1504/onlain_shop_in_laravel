@@ -62,7 +62,7 @@
                         <img style="width: 300px" src="{{ asset('assets/uploads/product/' . $product->image) }}" alt="">
                     @endif
                     <div class="col-md-12 mt-3">
-                        <input type="file" name="image" required>
+                        <input type="file" name="image" >
                     </div>
                     <div class="col-md-12">
                         <button type="submit" class="btn btn-primary">Submit</button>

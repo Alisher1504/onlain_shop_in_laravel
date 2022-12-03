@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers\Frontend;
 
-use App\Http\Controllers\Controller;
+use App\Models\Product;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class FrontController extends Controller
 {
 
 
     public function index() {
-        return view('frontend.index');
+        $product_trend = Product::where('trending', '1')->take(15)->get();
+        return view('frontend.index', compact('product_trend'));
     }
 
 }
